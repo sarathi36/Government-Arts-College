@@ -1,0 +1,486 @@
+<html>
+    <head>
+        <link rel = "stylesheet" href="style.css" type="text/css"> 
+        <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <style>
+             *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            #header {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              padding: 10px 80px;
+              background: #E3E6F3;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+              z-index: 999;
+              position: sticky;
+              top: 0;
+              left: 0;
+              animation-name: example;
+                 animation-duration: 5s;
+            }
+            @keyframes example{
+                from { background-color: #E3E6F3;}
+                to {background-color: #Eec808;}
+
+            }
+            
+            #header img{
+                padding: 5px 5px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+            }
+            #header .logo{
+                padding: 5px;
+                background-color: #E3E6F3;
+                object-fit: contain;
+                mix-blend-mode: color-burn;
+                animation-name: sample;
+                animation-duration: 5s;
+                
+            }
+            @keyframes sample{
+                from {background-color: #E3E6F3;}
+                to {background-color: #ee0814;}
+            }
+            
+            
+            
+            #navbar{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            #navbar li{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                list-style: none;
+                padding: 0 40px;
+                position: relative;
+
+            }
+            #navbar li a{
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 600;
+                color: #1a1a1a;
+                transition: 0.3s ease;    
+            }
+            #navbar li a:hover,
+            #navbar li a.active
+            {
+                color: #088178;
+            }
+            #navbar li a.active::after{
+                content:"" ;
+                width: 30%;
+                height: 2px;
+                background: #088178;
+                position: absolute;
+                bottom: -2px;
+                left: 35px;
+
+            }
+            #sam{
+                background-image: url(images/p2.jpg);
+                height: 90vh;
+                width: 100%;
+                background-size: cover;
+                background-position: top 20% right 0;
+                padding: 0 80px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+            }
+            #sam h4{
+                padding-bottom: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+
+            }
+            #sam h1{
+                color: aqua ;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+
+                
+            }
+            #sam h3{
+                color: #Eec808;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+
+            }
+            #sam button{
+                background-image: url(images/b3.jpg);
+                background-color: transparent;
+                color: #E3E6F3;
+                border: 0;
+                padding: 14px 80px 14px 64px;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                font-weight: 700;
+                font-size: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+            }
+            #sam button:hover{
+                background-color: #088178;
+
+            }
+            #moon{
+                padding: 48px 80px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+            }
+            #moon .feature{
+                width: 300px;
+                text-align: center;
+                padding: 25px 15px;
+                box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+                border: 1px solid #cce7d0;
+                border-radius: 4px;
+                margin: 15px 0;
+
+            }
+            #moon .feature:hover{
+                box-shadow: 10px 10px 34px rgba(70, 62, 221, 0.1);
+            }
+            #moon .feature h6{
+                display: inline-block;
+                padding: 9px 8px 6px 8px;
+                line-height: 1;
+                border-radius: 4px;
+                color: #088178;
+                background-color: #fddde4;
+            }
+            #moon .feature img{
+                width: 100%;
+                margin-bottom: 10px;
+
+            }
+            #college{
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            #college p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            #college .project{
+                display: flex;
+                justify-content: space-between;
+                padding-top: 20px;
+                align-items: center;
+                flex-wrap: wrap;
+
+            }
+            #college .pro{
+                width: 23%;
+                min-width: 250px;
+                padding: 10px 12px;
+                border: 1px solid #cce7d0;
+                border-radius: 25px;
+                cursor: pointer;
+                box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+                margin: 15px 0;
+                transition: 0.2 ease;
+                position: relative;
+
+            }
+            #college .pro img{
+                width: 100%;
+                float: left;
+                left: 15%;
+                align-items: center;
+                justify-content: center;
+                border-radius: 25px;
+                display: flex;
+                margin: auto;
+            }
+            #college .pro:hover{
+                box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+            }
+            #college .pro .ject{
+                text-align: center;
+                padding: 10px 0;
+            }
+            #college .pro .ject span{
+                color: #606063;
+                font-size: 12px;
+
+            }
+            strong{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: gold;
+            }
+            #banner {
+                display: flex;
+                flex-direction: column;
+                background-size: cover;
+                width: 100%;
+                background-position: top 20% right 0;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-image: url(images/b1.jpg);
+               
+                height: 40vh;
+                background-size: cover;
+                background-position: center;
+
+            }
+            #banner h4{
+                color: #fff;
+                font-size: 16px;
+
+            }
+            #banner h1{
+                color: #fff;
+                font-size: 30px;
+                padding: 10px 0;
+                
+            }
+            #banner p span{
+                color: #ef3636;
+            }
+            #banner button{
+                font-size: 15px;
+                font-weight: 600;
+                padding: 10px 30px;
+                color: #000;
+                background-color: #fff;
+                border-radius: 4px;
+                cursor: pointer;
+                border: none;
+                
+                transition: 0.2s ;
+            }
+            #banner button:hover{
+                background-color: #088178;
+                color: #fff;
+
+            }
+            footer{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+            }
+            footer .col1{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 20px; 
+                border-radius: 50%;
+                padding: 10px;
+            }
+            footer .col1 a i{
+                font-size: 2em;
+                color: black;
+                opacity: 0.9;
+            }
+            footer .col1 a:hover{
+                background-color: gold;
+                transition: 0.5s;
+            }
+            footer h4{
+                font-size: 15px;
+                padding-bottom: 20px;
+            }
+            footer p{
+                font-size: 12px;
+                margin: 0 0 8px 0;
+            }
+            footer a{
+                font-size: 12px;
+                text-decoration: none;
+                color: #222;
+
+                margin-bottom: 10px;
+            }
+            .section1 .logo1{
+                mix-blend-mode: color-burn;
+            }
+            
+
+
+            marquee{
+                font-size: 30px;
+                font-weight: 700;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: #088178;
+            }
+
+        
+
+        </style>
+        <script>
+            function myfunction() {
+                let text;
+                let person = prompt("Plese Enter Your Name",);
+
+                if((person == null) || (person =""))
+                {
+                    text = "User Cancelled a name";
+                }
+                else{
+                    "hello " + person +"How Are You Today?";
+
+                }
+                document.getElementById("demo").innerHTML.text;
+
+                
+            }
+        </script>
+
+
+    </head>
+    <title>
+        Design a college page..
+    </title>
+
+    <body>
+        <section id="header">
+            <a href="https://gackarur.ac.in/"> <img src="images/l1.png " class="logo" > </a> 
+           
+            <div>
+                <ul id="navbar">
+                    <li> <a class="active" href="">Home</a></li>
+                    
+                    <li> <a class=" " href="Department.html"> Department</a> </li>
+                   
+                    <li> <a href="exam.html"> Exam </a></li>
+                    <li> <a href="e-condent.html"> E-Content </a></li>
+                    <li> <a href="face.html"> About </a></li>
+
+                </ul>
+            </div>
+    
+        </section>
+        <section id="sam">
+            <h4> Welcome To </h4><br><br>
+            <h3> Government Arts College Karur</h3><br>
+            <h1> 20+ Courses</h1><br>
+            <p id="demo"></p>
+            <button onclick="myfunction()"> Study!! </button>  
+          
+        </section>
+        <hr>
+
+        <marquee>Click Study to register your informations</marquee>
+
+        <section id="moon">
+            <div class="feature">
+                <img src="images/gac2.jpg">
+                <h6>Front gate </h6>
+
+            </div>
+            <div class="feature">
+                <img src="images/gac1.jpg">
+                <h6>Interior </h6>
+
+            </div>
+            <div class="feature">
+                <img src="images/gac4.jpeg">
+                <h6>Playing Ground</h6>
+
+            </div>
+            
+
+         <section id="college">
+                <h2><strong>Computer </strong> Science </h2>
+                <p> Department informations</p>
+                <div class="project">
+                    <div class="pro">
+                        <img src="images/s1.jpg">
+                        <div class="ject">
+                            <span>HOD</span>
+                            
+
+                        </div>
+
+                    </div>
+                    <div class="pro">
+                        <img src="images/s2.jpg">
+                        <div class="ject">
+                            <span>ASP Mam</span>
+                            
+
+                        </div>
+
+                    </div>
+                    <div class="pro">
+                        <img src="images/s3.jpg">
+                        <div class="ject">
+                            <span>Faculty</span>
+                            
+
+                        </div>
+
+                    </div>
+                </div>
+
+               
+                                    
+
+                
+            
+                
+            </section>
+            
+
+        </section>
+
+        <section id="banner">
+            <h4>Contact Details </h4>
+            <h1>The Principle   </h1>
+            <p> Government Arts College <span>Karur</span> </p>
+            <a href="face.html"><button>More</button> </a>
+            <hr>
+
+        </section>  
+
+        <marquee> This is a best college in Karur...!!!</marquee>
+        
+        <footer class="section1">
+            <div class="col">
+                <img src="images/l1.png" class="logo1">
+                <h4> Contact Us</h4>
+                <p> <strong>Address :</strong> Bharadhitasan Nagar, Thanthonimalai, Karur.</p>
+                <p> <strong>Phone No :</strong> +91-4324257534</p>
+                <p> <strong>E-Mail Id :</strong> Mail us : gack@gackarur.ac.in.</p>
+
+            </div>
+            <div class="col1">
+                <h4> Follow us.</h4>
+                <a href="#"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://instagram.com/sarathii36?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"> <i class="fa-brands fa-square-instagram"></i></i>  </a>
+               
+                <a href="#"> X</a>
+                <a href="#"> Threat</a>
+            </div>
+
+            
+
+         
+        </footer>
+        <div class="copyright">
+            <P> @2023, Sarathi -- Sample College Website</P>
+        </div>
+
+               
+    
+            
+            
+
+            
+        
+       
+
+
+    </body>
+
+
+</html>

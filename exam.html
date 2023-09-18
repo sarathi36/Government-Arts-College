@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Result Statistics</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+             #header {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              padding: 10px 80px;
+              background: #E3E6F3;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+              z-index: 999;
+              position: sticky;
+              top: 0;
+              left: 0;
+              animation-name: example;
+                 animation-duration: 5s;
+            }
+            @keyframes example{
+                from { background-color: #E3E6F3;}
+                to {background-color: #Eec808;}
+
+            }
+            #navbar{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            #navbar li{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                list-style: none;
+                padding: 0 40px;
+                position: relative;
+
+            }
+            #navbar li a{
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 600;
+                color: #1a1a1a;
+                transition: 0.3s ease;    
+            }
+            #navbar li a:hover,
+            #navbar li a.active
+            {
+                color: #088178;
+            }
+            #navbar li a.active::after{
+                content:"" ;
+                width: 30%;
+                height: 2px;
+                background: #088178;
+                position: absolute;
+                bottom: -2px;
+                left: 35px;
+
+            }
+            
+            #header img{
+                padding: 5px 5px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+            }
+            #header .logo{
+                padding: 5px;
+                background-color: #E3E6F3;
+                object-fit: contain;
+                mix-blend-mode: color-burn;
+                animation-name: sample;
+                animation-duration: 5s;
+                
+            }
+            @keyframes sample{
+                from {background-color: #E3E6F3;}
+                to {background-color: #ee0814;}
+            }
+            #head{
+                font-size: 30px;
+                font-weight: 200;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+                 background: #E3E6F3;
+                 position: sticky;
+                 top: 0;
+                 left: 0;
+                 animation-name: demo;
+                 animation-duration: 5s;
+            }
+            @keyframes demo{
+                from { background-color: #E3E6F3;}
+                to {background-color: darkcyan;}
+
+            }
+            #head h1{
+                color: gold;
+                text-align: center;
+                justify-content: center;
+            }
+            #write{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-align: center;
+                justify-content: center;
+            }
+            #table {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            #table td, #table th{
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            #table tr:hover {background-color: #ddd;}
+
+            #table th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+                color: white;
+            }
+            h3{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-align: center;
+                justify-content: center;
+            }
+            marquee{
+                font-size: 30px;
+                font-weight: 700;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: #088178;
+            }
+            marquee strong{
+                color: black;
+            }
+            #post {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            #post td, #post th{
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            #post tr:hover {background-color: #ddd;}
+
+            #post th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+                color: white;
+            }
+            footer{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+            }
+            footer .col1{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 20px; 
+            }
+            footer h4{
+                font-size: 15px;
+                padding-bottom: 20px;
+            }
+            footer p{
+                font-size: 12px;
+                margin: 0 0 8px 0;
+            }
+            button{
+                font-size: 15px;
+                font-weight: 600;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 30px;
+                color: #000;
+                background-color: #fff;
+                border-radius: 4px;
+                cursor: pointer;
+                border: none;
+                
+                transition: 0.2s ;
+            }
+             button:hover{
+                background-color: #088178;
+                color: #fff;
+
+            }
+            #down h1{
+                
+                font-size: 30px;
+                font-weight: 200;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+                 background: #E3E6F3;
+                 position: sticky;
+                 top: 0;
+                 left: 0;
+                 animation-name: demo;
+                 animation-duration: 5s;
+            }
+            @keyframes demo{
+                from { background-color: #E3E6F3;}
+                to {background-color: darkcyan;}
+
+            }
+            #down h1{
+                color: gold;
+                text-align: center;
+                justify-content: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <section id="header">
+            <a href="#"> <img src="images/l1.png " class="logo" > </a> 
+           
+            <div>
+                <ul id="navbar">
+                    <li> <a class=" " href="index.html">Home</a></li>
+                    
+                    <li> <a href="Department.html"> Department</a> </li>
+                   
+                    <li> <a class="active" href="exam.html"> Exam </a></li>
+                    <li> <a href="e-condent.html"> E-Content </a></li>
+                    <li> <a href="face.html"> About </a></li>
+
+                </ul>
+            </div>
+    
+        </section><br><br>
+        <div id="head">
+            <h1>Results.</h1>
+        </div><br>
+        <div id="write">
+            <h1>Result Statistics</h1><br>
+            <h3>UG Pass Percentage April 2013 to 2015 :</h3>
+        </div><br>
+        <table id="table">
+            <tr>
+                <th>S.No</th>
+                <th>Department</th>
+                <th>April 2013</th>
+                <th>April 2014</th>
+                <th>April 2015</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Botany</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Chemistry</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Commerce</td>
+                <td>90.00</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>B.B.A</td>
+                <td>90.00</td>
+                <td>100</td>
+                <td>100</td>
+        
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Computer Science</td>
+                <td>90.00</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>Economics</td>
+                <td>90.00</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>7.</td>
+                <td>English</td>
+                <td>90.00</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>8.</td>
+                <td>Tamil</td>
+                <td>90.00</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>9.</td>
+                <td>Geography</td>
+                <td>90.00</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>10.</td>
+                <td>History</td>
+                <td>90.00</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>11.</td>
+                <td>Mathematics</td>
+                <td>90.00</td>
+                <td>100</td>
+                <td>100</td>
+                
+            </tr>
+            <tr>
+                <td>12.</td>
+                <td>Physics</td>
+                <td>90.00</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>13.</td>
+                <td>Zoology</td>
+                <td>90.00</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>14.</td>
+                <td>Statistics</td>
+                <td>90.00</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>15.</td>
+                <td>B.Com CA</td>
+                <td>90.00</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+        </table><br>
+        <marquee>We are in UG rank at <strong> 5th </strong>...</marquee><br>
+
+        <h3>Postgraduate Programmers.</h3><br>
+
+        <table id="post">
+            <tr>
+                <th>S.No</th>
+                <th>Department</th>
+                <th>April 2013</th>
+                <th>April 2014</th>
+                <th>April 2015</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Chemistry</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Commerce</td>
+                <td>90.00</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Computer Sciences</td>
+                <td>100</td>
+                <td>83.33</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Economics</td>
+                <td>95.23</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>English</td>
+                <td>96.55</td>
+                <td>72.22</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>Tamil</td>
+                <td>96.55</td>
+                <td>72.22</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>7.</td>
+                <td>History</td>
+                <td>100</td>
+                <td>83.33</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>8.</td>
+                <td>Mathematics</td>
+                <td>72.00</td>
+                <td>91.30</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>9.</td>
+                <td>Physics</td>
+                <td>89.47</td>
+                <td>94.77</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>10.</td>
+                <td>Zoology</td>
+                <td>70.97</td>
+                <td>74.07</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>11.</td>
+                <td>Geography</td>
+                <td>-</td>
+                <td>100</td>
+                <td>97.05</td>
+            </tr>
+        </table><br>
+
+        <marquee>We are in PG rank at <strong> 3rd </strong>...</marquee>
+        <br><br>
+
+        <div id="down">
+            <h1> <strong>Download </strong> Your Hallticket ! </h1><br>
+           <a href="https://www.gackarurcoe.com/ ">  <button>Click</button> </a>
+        </div><br>
+
+        <footer class="section1">
+            <div class="col">
+                <img src="images/l1.png" class="logo1">
+                <h4> Contact Us</h4>
+                <p> <strong>Address :</strong> Bharadhitasan Nagar, Thanthonimalai, Karur.</p>
+                <p> <strong>Phone No :</strong> +91-4324257534</p>
+                <p> <strong>E-Mail Id :</strong> Mail us : gack@gackarur.ac.in.</p>
+
+            </div>
+
+    </body>
+</html>

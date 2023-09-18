@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>B.sc Cs S-1</title>
+        <style>
+             *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+             #header {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              padding: 10px 80px;
+              background: #E3E6F3;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+              z-index: 999;
+              position: sticky;
+              top: 0;
+              left: 0;
+              animation-name: example;
+                 animation-duration: 5s;
+            }
+            @keyframes example{
+                from { background-color: #E3E6F3;}
+                to {background-color: #Eec808;}
+
+            }
+            #navbar{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            #navbar li{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                list-style: none;
+                padding: 0 40px;
+                position: relative;
+
+            }
+            #navbar li a{
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 600;
+                color: #1a1a1a;
+                transition: 0.3s ease;    
+            }
+            #navbar li a:hover,
+            #navbar li a.active
+            {
+                color: #088178;
+            }
+            #navbar li a.active::after{
+                content:"" ;
+                width: 30%;
+                height: 2px;
+                background: #088178;
+                position: absolute;
+                bottom: -2px;
+                left: 35px;
+
+            }
+            
+            #header img{
+                padding: 5px 5px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+            }
+            #header .logo{
+                padding: 5px;
+                background-color: #E3E6F3;
+                object-fit: contain;
+                mix-blend-mode: color-burn;
+                animation-name: sample;
+                animation-duration: 5s;
+                
+            }
+            @keyframes sample{
+                from {background-color: #E3E6F3;}
+                to {background-color: #ee0814;}
+            }
+            .launch {
+                display: flex;
+                box-shadow:  0 3px 10px rgba(0, 0, 0, 0.6);
+                background: #E3E6F3;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                position: sticky;
+              top: 0;
+              left: 0;
+
+            }
+            .launch div {
+                flex-basis: 100px;
+            }
+            .launch div p{
+                font-size: 60px;
+                margin-bottom: -15px;
+            }
+            #sam{
+                font-size: 20px;
+                font-weight: 200%;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+                 background: #E3E6F3;
+                 animation-name: demo;
+                 animation-duration: 5s;
+            }
+            @keyframes demo{
+                from { background-color: #E3E6F3;}
+                to {background-color: darkcyan;}
+
+            }
+            #sam strong{
+                color: cadetblue;
+            }
+            #super {
+                background-color: antiquewhite;
+            }
+
+            #table {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            #table td, #table th{
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            #table tr:hover {background-color: #ddd;}
+
+            #table th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+                color: white;
+            }
+            marquee{
+                font-size: 30px;
+                font-weight: 700;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: #088178;
+            }
+            button{
+                font-size: 15px;
+                font-weight: 600;
+                padding: 10px 30px;
+                color: #000;
+                background-color: #fff;
+                border-radius: 4px;
+                cursor: pointer;
+                border: none;
+                
+                transition: 0.2s ;
+            }
+             button:hover{
+                background-color: #088178;
+                color: #fff;
+
+            }
+            marquee strong{
+                color:black;
+            }
+            footer{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+            }
+            footer .col1{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 20px; 
+            }
+            footer h4{
+                font-size: 15px;
+                padding-bottom: 20px;
+            }
+            footer p{
+                font-size: 12px;
+                margin: 0 0 8px 0;
+            }
+
+           
+        </style>
+
+        <script>
+            var countdowndate = new Date ("Nov 10, 2023 00:00:00").getTime();
+            var x = setInterval(function(){
+                var now = new Date().getTime();
+                var distance = countdowndate - now;
+
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60 )) / (1000 * 60 ));
+                var seconds = Math.floor((distance % (1000 * 60 )) / (1000));
+
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("minutes").innerHTML = minutes;
+                document.getElementById("seconds").innerHTML = seconds;
+
+
+
+            },1000);
+
+        </script>
+
+    </head>
+    <body>
+        <section id="header">
+            <a href="3"> <img src="images/l1.png " class="logo" > </a> 
+           
+            <div>
+                <ul id="navbar">
+                    <li> <a  href="index.html">Home</a></li>
+                    
+                    <li> <a class="active" href="Department.html"> Department</a> </li>
+                   
+                    <li> <a href="exam.html"> Exam </a></li>
+                    <li> <a href="e-condent.html"> E-Content </a></li>
+                    <li> <a href="face.html"> About </a></li>
+
+                </ul>
+            </div>
+    
+        </section>
+        <br>
+        <div id="sam">
+            <h1><strong>Countdown</strong> For Semester... </h1>
+        </div><br>
+
+        <marquee> This is a <strong>Fifth</strong> Semester !!!.</marquee>
+        <br>
+
+        <section id="super">
+
+        </section>
+
+        
+
+       
+        <div class="launch">
+            <div>
+                <p id="days">00</p>
+                <span>Days</span>
+            </div>
+            <div>
+                <p id="hours">00</p>
+                <span>Hours</span>
+            </div>
+            <div>
+                <p id="minutes">00</p>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <p id="seconds">00</p>
+                <span>Seconds</span>
+            </div>
+        </div> <br> <br>
+
+        
+            <table id="table">
+                <tr>
+                    <th> S.No</th>
+                    <th> Date</th>
+                    <th> Subject</th>
+                    <th> Syllabus</th>
+                </tr>
+
+                <tr>
+                    <td>01.</td>
+                    <td> Not Conformed</td>
+                    <td> ASP .Net </td>
+                    <td> <a href="UG/asp.net.pdf"><button>Download</button></a></td>
+                </tr>
+                <tr>
+                    <td>02.</td>
+                    <td> Not Conformed</td>
+                    <td> ASP .Net Lab</td>
+                    <td><a href="images/asplab.jpg"><button>Download</button></a></td>
+                </tr>
+                <tr>
+                    <td>03.</td>
+                    <td> Not Conformed</td>
+                    <td> Operating System</td>
+                    <td> <a href="UG/OS.pdf"><button>Download</button></a></td>
+                </tr>
+                <tr>
+                    <td>04.</td>
+                    <td> Not Conformed</td>
+                    <td> Design and analysis of algorithm </td>
+                    <td> <a href="UG/Algorithm.pdf"><button>Download</button></a></td>
+                </tr>
+                <tr>
+                    <td>05.</td>
+                    <td> Not Conformed</td>
+                    <td> PHP</td>
+                    <td> <a href="UG/PHP.pdf"><button>Download</button></a></td>
+                </tr>
+                <tr>
+                    <td>06.</td>
+                    <td> Not Conformed</td>
+                    <td> Microprosser </td>
+                    <td> <a href="images/Micro.jpg"><button>Download</button></a></td>
+                </tr>
+                <tr>
+                    <td>07.</td>
+                    <td> Not Conformed</td>
+                    <td> Soft skills</td>
+                    <td> <a href=""><button>Download</button></a></td>
+                </tr>
+
+            </table><br><hr>
+
+            <footer class="section1">
+                <div class="col">
+                    <img src="images/l1.png" class="logo1">
+                    <h4> Contact Us</h4>
+                    <p> <strong>Address :</strong> Bharadhitasan Nagar, Thanthonimalai, Karur.</p>
+                    <p> <strong>Phone No :</strong> +91-4324257534</p>
+                    <p> <strong>E-Mail Id :</strong> Mail us : gack@gackarur.ac.in.</p>
+    
+                </div>
+        
+    </body>
+</html>

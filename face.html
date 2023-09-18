@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About our college</title>
+        <style>
+             *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+             #header {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              padding: 10px 80px;
+              background: #E3E6F3;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+              z-index: 999;
+              position: sticky;
+              top: 0;
+              left: 0;
+              animation-name: example;
+                 animation-duration: 5s;
+            }
+            @keyframes example{
+                from { background-color: #E3E6F3;}
+                to {background-color: #Eec808;}
+
+            }
+            #navbar{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            #navbar li{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                list-style: none;
+                padding: 0 40px;
+                position: relative;
+
+            }
+            #navbar li a{
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 600;
+                color: #1a1a1a;
+                transition: 0.3s ease;    
+            }
+            #navbar li a:hover,
+            #navbar li a.active
+            {
+                color: #088178;
+            }
+            #navbar li a.active::after{
+                content:"" ;
+                width: 30%;
+                height: 2px;
+                background: #088178;
+                position: absolute;
+                bottom: -2px;
+                left: 35px;
+
+            }
+            
+            #header img{
+                padding: 5px 5px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+            }
+            #header .logo{
+                padding: 5px;
+                background-color: #E3E6F3;
+                object-fit: contain;
+                mix-blend-mode: color-burn;
+                animation-name: sample;
+                animation-duration: 5s;
+                
+            }
+            @keyframes sample{
+                from {background-color: #E3E6F3;}
+                to {background-color: #ee0814;}
+            }
+            #moon{
+                font-size: 30px;
+                font-weight: 200;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+                 background: #E3E6F3;
+                 position: sticky;
+                 top: 0;
+                 left: 0;
+                 animation-name: demo;
+                 animation-duration: 5s;
+            }
+            @keyframes demo {
+                from { background-color: #E3E6F3;}
+                to {background-color: darkcyan;}
+
+            }
+            #moon h1{
+                color: gold;
+            }
+            #moon strong{
+                color: cadetblue;
+            }
+            #write h1{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-align: center;
+                justify-content: center;
+            }
+            #writr strong{
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            #write p{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 20px;
+                color: black;
+
+            }
+            #write ul li{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 20px;
+                color: black;
+            }
+            footer{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+            }
+            footer .col1{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 20px; 
+            }
+            footer h4{
+                font-size: 15px;
+                padding-bottom: 20px;
+            }
+            footer p{
+                font-size: 12px;
+                margin: 0 0 8px 0;
+            }
+            marquee{
+                font-size: 30px;
+                font-weight: 700;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: #088178;
+            }
+        </style>
+
+    </head>
+    <body>
+        <section id="header">
+            <a href="#"> <img src="images/l1.png " class="logo" > </a> 
+           
+            <div>
+                <ul id="navbar">
+                    <li> <a class=" " href="index.html">Home</a></li>
+                    
+                    <li> <a href="Department.html"> Department</a> </li>
+                   
+                    <li> <a href="exam.html"> Exam </a></li>
+                    <li> <a href="e-condent.html"> E-Content </a></li>
+                    <li> <a class="active" href="face.html"> About </a></li>
+
+                </ul>
+            </div>
+    
+        </section><br><br>
+        <div id="moon">
+            <h1> <strong>History</strong>  <strong>Of</strong> Our  College...</h1>
+        </div><br>
+
+        <div id="write">
+            <h1> <strong>About</strong> the College </h1><br>
+            <p>The Government Arts College, Thanthonimalai, Karur enjoys the fame of being the only institution in the whole district to show the longest academic history and public service. Established in 1966, it has worked its way ahead of other colleges in the matter of offering higher education of remarkable quality and largely to middle and lower income groups. The repute of this town as a textile industrial centre is further enhanced by the performance record of the Government Arts College Karur as it has never once in the recent years lacked a gold medalist. This college is affiliated to Bharathidasan University, Tiruchirappalli.</p>
+             <br><h1> <strong>History</strong> and Growth</h1><br>
+             <ul>
+                <li>
+                    Government Arts College, Karur was established in the year 1966.
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    The College was commenced with five under graduate courses under the affiliation of 
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    the Madras University adopting Tamil as its medium of instruction.
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    The college has been functioning effectively with the adoption of co-education system since 1972.
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    From the academic year 1984-1985 onwards, the college functions under the affiliation of Bharthidasan university.
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    The Institution gets a fair credit for having introduced B.Sc Computer Science course during the academic year 1988-89 for the first time in Tamil Nadu.
+
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    Computer Literacy Programme launched by the Tamil Nadu Government has been functioning successfully since 2000 for the Non-computer science students.
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    During 2001, the college was accredited with three star status by NAAC. The college was again reaccredited with B+ status by NAAC during 2006-07.
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    During the academic year 2006-2007, the Tamil Nadu Government converted all self-financing courses as regular courses and regular faculties were appointed to conduct those classes.
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    The college was conferred Autonomous Status during the academic year 2007 - 2008. Autonomous status was further extended upto 2018-19.
+                </li>
+             </ul><br>
+             <marquee>Government Arts College, Karur was established in the year 1966.</marquee><br>
+             <h1> After Attaining Autonomy </h1><br>
+             <ul>
+                <li>
+                    All the departments were equipped with audio visual facility. College library is enhanced with Digital Library facility.
+
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    We offer B.Com.(CA) B. Stat. and BSC Geology.
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    We also offer Under Graduate courses in Computer Science and B.Com. under shift II basis. At present the college offers 17 degree programs.
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    We offer Full time and Part time Ph.D. in History, Tamil, Botany, Mathematics Economics Eand Computer Science.
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    We offer full time M.Phil. in History, Tamil, Botany, Commerce, Zoology, English and Physics.
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    College library, Auditorium, Geography lab, Commerce and Geography block , Physics wing, Mini Auditorium and Botany Research Lab were constructed.
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    Language Lab was established during the academic year 2010-2011.
+
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    Faculty strength increased considerably to more than 115, in which 62 are Ph.D.holders.
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    More than 100 computers were purchased under central purchase scheme through DCE.
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    Internet facility is available in all the departments and the college office which helps in expanding the knowledge and teaching the subject with recent and innovative thoughts to students.
+                </li>
+             </ul>
+             <ul>
+                <li>
+                    Our college received and utilized funds from UGC, UGC(A), PG Grant, Non-Plan, UGC XI and UGC XII plan schemes for the purchase of equipments, books and building construction.
+                </li>
+             </ul>
+             
+        </div><br>
+        <marquee>We also offer Under Graduate courses in Computer Science and B.Com. under shift II basis. At present the college offers 17 degree programs.</marquee>
+        <hr>
+        <footer class="section1">
+            <div class="col">
+                <img src="images/l1.png" class="logo1">
+                <h4> Contact Us</h4>
+                <p> <strong>Address :</strong> Bharadhitasan Nagar, Thanthonimalai, Karur.</p>
+                <p> <strong>Phone No :</strong> +91-4324257534</p>
+                <p> <strong>E-Mail Id :</strong> Mail us : gack@gackarur.ac.in.</p>
+
+            </div>
+
+    </body>
+</html>
